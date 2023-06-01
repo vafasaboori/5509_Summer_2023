@@ -49,7 +49,7 @@ num_markets <- length(markets)
 
 # Option 1: Ship exclusively by rail ----
 
-# Create the LP problem
+# Create the LP problem ----
 lp_model_1 <- make.lp(0, num_sources * num_markets) 
 # sets up a framework to define the obj func, constraints, etc. of the LP problem.
 # make.lp(num.rows, num.cols)
@@ -178,7 +178,9 @@ for (i in 1:num_sources) {
 cat("Total Equivalent Uniform Annual Cost (Option 2): $",
     round(get.objective(lp_model_2), 2), " \n")
 
-# Create the LP problem for Option 3 ----
+
+# Option 3: Ship by either rail or water depending on the cost----
+# Create the LP problem ----
 lp_model_3 <- make.lp(0, num_sources * num_markets)
 obj <- rep(0, num_sources * num_markets)
 
