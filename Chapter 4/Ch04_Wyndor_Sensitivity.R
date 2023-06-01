@@ -54,7 +54,7 @@ sensitivity_analysis$sens.coef.from
 sensitivity_analysis$sens.coef.to
 
 # disabling scientific notation: scientific penalty unless wider than 999 digits.
-options(scipen = 999)
+options(scipen = 1)
 
 # Q2: What if the unit profits of both of Wyndor’s new products are inaccurate? ----
   # Assignment: Implement 100% rule in R (try to automate the process)
@@ -80,7 +80,7 @@ num_simulations <- 1000
 
 # Initialize vectors to store results
 results <- vector("list", num_simulations)
-  # vector initialized as a list, i.e. each element ocan be any type of object
+  # vector initialized as a list, i.e. each element can be any type of object
   # This vector store the solutions from each simulation run of LP.
 
 p_values <- numeric(num_simulations)
