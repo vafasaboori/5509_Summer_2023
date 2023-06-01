@@ -112,6 +112,7 @@ solve(lp_model_1)
 
 # Extract the solution
 solution <- get.variables(lp_model_1)
+solution
 
 # Print the solution
 cat("Shipping Plan (Option 1):\n")
